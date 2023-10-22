@@ -4,33 +4,21 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <section class="bg-white">
-        <div class="hero flex items-center justify-center w-full max-w-[1300px] mx-auto h-[650px] relative">
-            <div class="w-full flex justify-between items-center">
-                <div class="w-1/2 flex flex-col space-y-4">
-                    <span class="text-2xl text-[#27FF5E] font-semibold animate-bounce">Welcome!</span>
-                    <h1 class="text-4xl font-semibold">Sync Up with Coding Enthusiasts</h1>
-                    <p class="text-gray-600">Join a Collaborative Community of IT and CS Students to Solve Programming Challenges Together and Master the Art of Programming.</p>
-                    <div class="py-2">
+    <section class="bg-white py-6 md:py-3">
+        <div class="hero flex items-center justify-center w-full max-w-[1300px] mx-auto h-auto min-h-[650px] px-4 relative">
+            {% include 'components/bg-icons.html' %}
+            <div class="w-full flex flex-col-reverse md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="w-full md:w-1/2 flex flex-col space-y-4">
+                    <span class="text-2xl text-[#27FF5E] font-semibold animate-bounce text-center md:text-left">Welcome!</span>
+                    <h1 class="text-4xl font-semibold text-center md:text-left">Sync Up with Coding Enthusiasts</h1>
+                    <p class="text-gray-600 text-center md:text-left">Join a Collaborative Community of IT and CS Students to Solve Programming Challenges Together and Master the Art of Programming.</p>
+                    <div class="py-2 flex justify-center md:justify-start space-x-4">
                         <a href="" class="text-lg text-[#27FF5E] font-medium border border-[#27FF5E] px-6 py-2">Login</a>
+                        <a href="" class="text-lg text-gray-700 font-medium border border-gray-700 px-6 py-2">Register</a>
                     </div>
                 </div>
-                <div class="w-1/2 images">
-                    <img src="{% static 'images/hero.svg' %}" alt="" srcset="" class="hidden">
-                    <img src="{% static 'images/coding.svg' %}" alt="" srcset="" class="hidden">
-                    <img src="{% static 'images/creator.svg' %}" alt="" srcset="" class="hidden">
-                </div>
-            </div>
-            
-            <i class='bx bxl-css3 absolute text-6xl text-gray-200 top-20 left-44 '></i>
-            <i class='bx bxl-tailwind-css absolute text-6xl text-gray-200 top-96 left-44' ></i>
-            <i class='bx bxl-java absolute text-6xl text-gray-200 top-[500px] left-0'></i>
-            <i class='bx bxl-javascript absolute text-5xl text-gray-200 bottom-20 left-[500px]' ></i>
-            <i class='bx bxl-react absolute text-5xl text-gray-200 top-40 left-[480px]' ></i>
-            <i class='bx bxl-vuejs absolute text-5xl text-gray-200 top-10 left-[700px]'></i>
-            <i class='bx bxl-angular absolute text-4xl text-gray-200 bottom-10 left-[900px]' ></i>
-            <i class='bx bxl-c-plus-plus absolute text-4xl text-gray-200 top-10 left-5'></i>
-            
+                {% include 'components/hero-images.html' %}
+            </div> 
         </div>
         <script src="{% static 'js/script.js' %}"></script>
     </section>

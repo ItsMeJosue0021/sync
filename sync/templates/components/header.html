@@ -1,22 +1,26 @@
 {% load static %}
 <header class="bg-white py-3 border-b border-gray-200">
-    <div class="flex items-center justify-between w-full max-w-[1300px] mx-auto">
+    <div class="flex items-center justify-between w-full max-w-[1300px] mx-auto px-4">
       <a>
         <img src="{% static 'images/icons/sync.png' %}" alt="" srcset="" 
         class="w-24">
       </a>
-      <nav>
+      <nav class="hidden md:block">
         <ul class="flex items-center space-x-12">
-          <li class="group">
+          <li class="group ">
             <a href="{% url 'home' %}" class="font-medium group-hover:text-[#27FF5E]">Home</a>
           </li>
           <li class="group">
             <a href="{% url 'about' %}" class="font-medium group-hover:text-[#27FF5E]">About</a>
           </li>
-          <li>
-            <a href="" 
+          <li class="flex items-center space-x-3">
+            <a  href="{% url 'login' %}"
             class="px-4 py-2 rounded bg-[#27FF5E] text-white text-sm font-medium">
               LOGIN
+            </a>
+            <a  href="{% url 'register' %}" 
+            class="px-4 py-2 rounded bg-gray-200 text-gray-600 text-sm font-medium">
+              REGISTER
             </a>
           </li>
         </ul>
