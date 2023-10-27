@@ -1,6 +1,14 @@
 {% load static %}
 <div class="w-full md:w-1/2 images">
-    <img src="{% static 'images/hero.svg' %}" alt="" srcset="" class="hidden pb-10">
-    <img src="{% static 'images/coding.svg' %}" alt="" srcset="" class="hidden">
-    <img src="{% static 'images/creator.svg' %}" alt="" srcset="" class="hidden">
+    <div class="hidden img w-full h-full ">
+        {% include 'components/illustrations/hero1.html' %}
+    </div>
+
+    <div class="hidden img w-full h-full ">
+        {% include 'components/illustrations/hero2.html' %}
+    </div>
+
+    <div class="hidden img w-full h-full ">
+        {% include 'components/illustrations/hero3.html' %}
+    </div>
 </div>

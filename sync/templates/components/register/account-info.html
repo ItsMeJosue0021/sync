@@ -1,0 +1,36 @@
+{% load static %}
+<div id="section2" style="display: none;">
+    <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-2">
+            <div class="flex flex-col space-y-1">
+                <label for="email" class="font-medium text-sm">Email</label>
+                <input type="email" name="email" id="email" class="text-sm rounded border border-gray-300">
+            </div>
+            <div class="flex items-start space-x-4">
+                <div class="w-full flex flex-col space-y-1">
+                    <label for="password" class="font-medium text-sm">Password</label>
+                    <div class="relative rounded ">
+                        <input type="password" name="password" id="password" class="border border-gray-300 w-full rounded">
+                        <span id="showPassword" class="absolute top-1/2 transform -translate-y-1/2 right-3 text-xs text-gray-500 cursor-pointer" onclick="togglePassword('password')">Show</span>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col space-y-1">
+                    <div class="flex flex-col md:flex-row items-baseline space-x-2">
+                        <label for="confirmPassword" class="font-medium text-sm">Confirm Password</label>
+                        <span class="error text-red-600 text-xs"></span>
+                    </div>
+                    <div class="relative rounded ">
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="border border-gray-300 w-full rounded">
+                        <span id="showConfirmPassword" class=" absolute top-1/2 transform -translate-y-1/2 right-3 text-xs text-gray-500 cursor-pointer" onclick="toggleConfirmPassword('confirmPassword')">Show</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a id="prev" class="py-2 px-4 bg-gray-200 hover:bg-gray-300 rounded cursor-pointer">Back</a>
+            <a id="submit" class="py-2 px-4 text-white bg-[#27FF5E] rounded cursor-pointer hover:scale-105" onclick="checkPasswordMatch()">Submit</a>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/register/account-info.js' %}"></script>
+

@@ -1,7 +1,7 @@
 alternateImageDisplay()
 
 function alternateImageDisplay() {
-    const images = document.querySelectorAll('.images img');
+    const images = document.querySelectorAll('.img');
     let currentIndex = 0;
 
     function hideAllImages() {
@@ -17,5 +17,5 @@ function alternateImageDisplay() {
     }
 
     images[currentIndex].classList.remove('hidden');
-    setInterval(showNextImage, 4000);
+    setInterval(showNextImage, 6000);
 }
