@@ -3,8 +3,21 @@
 
 {% block content %}
     <section>
-        <div class="flex items-center justify-between w-full max-w-[1300px] mx-auto px-4">
-            <h1>login</h1>
+        <div class="flex items-center justify-center w-full max-w-[1300px] h-auto min-h-[650px] mx-auto px-4">
+            <form action="" class="rounded border border-gray-200 shadow p-4">
+                <div class="flex flex-col space-y-1">
+                    <label for="email" class="font-medium text-sm">Email</label>
+                    <input type="email" name="email" id="email" class="text-sm rounded border border-gray-300">
+                </div>
+                <div class="w-full flex flex-col space-y-1">
+                    <label for="password" class="font-medium text-sm">Password</label>
+                    <div class="relative rounded ">
+                        <input type="password" name="password" id="password" class="border border-gray-300 w-full rounded">
+                        <span id="showPassword" class="absolute top-1/2 transform -translate-y-1/2 right-3 text-xs text-gray-500 cursor-pointer" onclick="togglePassword('password')">Show</span>
+                    </div>
+                </div>
+            </form>
+            <script src="{% static 'js/login.js' %}"></script>   
         </div>
     </section>
 {% endblock %}

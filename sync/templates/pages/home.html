@@ -11,8 +11,8 @@
                     <h1 class="text-4xl font-bold text-center md:text-left text-gray-800">Sync Up with Coding Enthusiasts</h1>
                     <p class="text-gray-600 text-center md:text-left">Join a Collaborative Community of IT and CS Students to Solve Programming Challenges Together and Master the Art of Programming.</p>
                     <div class="py-2 flex justify-center md:justify-start space-x-4">
-                        <a href="" class="text-lg text-[#27FF5E] font-medium border border-[#27FF5E] hover:bg-[#27FF5E] hover:text-white rounded px-6 py-2">Login</a>
-                        <a href="" class="text-lg text-gray-700 font-medium border border-gray-700 hover:bg-gray-700 hover:text-white rounded px-6 py-2">Register</a>
+                        <a href="{% url 'login' %}" class="text-lg text-[#27FF5E] font-medium border border-[#27FF5E] hover:bg-[#27FF5E] hover:text-white rounded px-6 py-2">Login</a>
+                        <a href="{% url 'register' %}" class="text-lg text-gray-700 font-medium border border-gray-700 hover:bg-gray-700 hover:text-white rounded px-6 py-2">Register</a>
                     </div>
                 </div>
                 {% include 'components/hero-images.html' %}
