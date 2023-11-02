@@ -9,9 +9,9 @@
 
                 </div>
 
-                <div class="w-2/4 h-auto min-h-[400px] rounded border border-gray-300 p-2">
+                <div class="w-2/4 h-auto min-h-[400px] rounded">
                     <div class="flex flex-col space-y-4">
-                        <div class="w-full h-96 flex flex-col space-y-2 border border-gray-300 rounded p-2">
+                        <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
                             <div class="flex items-center space-x-2">
                                 <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex flex-col justify-start">
@@ -31,25 +31,245 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                                <div class="flex items-center justify-between py-1 border-b border-gray-200">
                                     <div class="flex space-x-1 items-center">
                                         <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
                                         <span class="text-sm font-light">12</span>
                                     </div>
                                     <span class="text-sm font-light">100 comments</span>
                                 </div>
-                                <div class="flex items-center justify-between">
+                                <div class="flex items-center justify-between pt-1">
                                     <div class="flex space-x-1 items-center">
                                         <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
                                         <span class="text-sm">Like</span>
                                     </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Commet</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Save</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full h-96 border border-gray-300 rounded"></div>
-                        <div class="w-full h-96 border border-gray-300 rounded"></div>
-                        <div class="w-full h-96 border border-gray-300 rounded"></div>
-                        <div class="w-full h-96 border border-gray-300 rounded"></div>
+                        <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
+                            <div class="flex items-center space-x-2">
+                                <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex flex-col justify-start">
+                                    <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                    <span class="text-xs font-light">8m</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="">
+                                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos debitis vel cum neque ex. Ex distinctio iusto placeat qui, dolorem dolores sequi voluptatum illo, vero aut voluptatem nobis repellat.</p>
+                                </div>
+                                <!-- <div class="flex items-start space-x-2">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                </div> -->
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between py-1 border-b border-gray-200">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
+                                        <span class="text-sm font-light">12</span>
+                                    </div>
+                                    <span class="text-sm font-light">100 comments</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-1">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
+                                        <span class="text-sm">Like</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Commet</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Save</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
+                            <div class="flex items-center space-x-2">
+                                <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex flex-col justify-start">
+                                    <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                    <span class="text-xs font-light">8m</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="">
+                                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos debitis vel cum neque ex. Ex distinctio iusto placeat qui, dolorem dolores sequi voluptatum illo, vero aut voluptatem nobis repellat.</p>
+                                </div>
+                                <!-- <div class="flex items-start space-x-2">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                </div> -->
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between py-1 border-b border-gray-200">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
+                                        <span class="text-sm font-light">12</span>
+                                    </div>
+                                    <span class="text-sm font-light">100 comments</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-1">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
+                                        <span class="text-sm">Like</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Commet</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Save</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
+                            <div class="flex items-center space-x-2">
+                                <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex flex-col justify-start">
+                                    <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                    <span class="text-xs font-light">8m</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="">
+                                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos debitis vel cum neque ex. Ex distinctio iusto placeat qui, dolorem dolores sequi voluptatum illo, vero aut voluptatem nobis repellat.</p>
+                                </div>
+                                <div class="flex items-start space-x-2">
+                                    <img src="{% static 'images/Coding.gif' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/testing.gif' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/workshop.gif' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between py-1 border-b border-gray-200">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
+                                        <span class="text-sm font-light">12</span>
+                                    </div>
+                                    <span class="text-sm font-light">100 comments</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-1">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
+                                        <span class="text-sm">Like</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Commet</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Save</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
+                            <div class="flex items-center space-x-2">
+                                <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex flex-col justify-start">
+                                    <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                    <span class="text-xs font-light">8m</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="">
+                                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos debitis vel cum neque ex. Ex distinctio iusto placeat qui, dolorem dolores sequi voluptatum illo, vero aut voluptatem nobis repellat.</p>
+                                </div>
+                                <!-- <div class="flex items-start space-x-2">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                </div> -->
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between py-1 border-b border-gray-200">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
+                                        <span class="text-sm font-light">12</span>
+                                    </div>
+                                    <span class="text-sm font-light">100 comments</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-1">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
+                                        <span class="text-sm">Like</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Commet</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Save</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
+                            <div class="flex items-center space-x-2">
+                                <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex flex-col justify-start">
+                                    <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                    <span class="text-xs font-light">8m</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="">
+                                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos debitis vel cum neque ex. Ex distinctio iusto placeat qui, dolorem dolores sequi voluptatum illo, vero aut voluptatem nobis repellat.</p>
+                                </div>
+                                <div class="flex items-start space-x-2">
+                                    <img src="{% static 'images/icons/sync.png' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/sync.png' %}" alt="" class="w-32 h-28 rounded">
+                                    <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-32 h-28 rounded">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between py-1 border-b border-gray-200">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
+                                        <span class="text-sm font-light">12</span>
+                                    </div>
+                                    <span class="text-sm font-light">100 comments</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-1">
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
+                                        <span class="text-sm">Like</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Commet</span>
+                                    </div>
+                                    <div class="flex space-x-1 items-center">
+                                        <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
+                                        <span class="text-sm">Save</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
