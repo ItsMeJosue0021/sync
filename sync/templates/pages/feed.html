@@ -2,14 +2,53 @@
 {% load static %}
 
 {% block content %}
-    <section class="py-4">
+    <section class="py-4 ">
         <div class="flex flex-col md:flex-row items-start justify-between w-full max-w-[1300px] h-auto min-h-[650px] mx-auto px-4 space-y-6 md:space-y-0">
-           <div class="w-full flex items-start space-x-4">
-                <div class="w-1/4 h-60 rounded border border-gray-300 sticky top-20">
+           <div class="w-full flex items-start space-x-4 ">
+                <div class="w-1/4 h-60 rounded sticky top-20 flex flex-col space-y-2">
+                    <div class="flex items-center justify-between border border-gray-300 rounded p-2">
+                        <div class="flex items-center space-x-2">
+                            <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                            <div class="flex flex-col justify-start">
+                                <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                <span class="text-xs font-light">Joined 3 days ago</span>
+                            </div>
+                        </div>
+                        <button class="rounded text-sm text-white bg-[#27FF5E] px-2 py-1">Connet</button>
+                    </div>
 
+                    <div class="flex items-center justify-between border border-gray-300 rounded p-2">
+                        <div class="flex items-center space-x-2">
+                            <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                            <div class="flex flex-col justify-start">
+                                <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                <span class="text-xs font-light">Joined 3 days ago</span>
+                            </div>
+                        </div>
+                        <button class="rounded text-sm text-white bg-[#27FF5E] px-2 py-1">Connet</button>
+                    </div>
+
+                    <div class="flex items-center justify-between border border-gray-300 rounded p-2">
+                        <div class="flex items-center space-x-2">
+                            <img src="{% static 'images/icons/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
+                            <div class="flex flex-col justify-start">
+                                <a class="text-gray-700 font-semibold">Joshua Salceda</a>
+                                <span class="text-xs font-light">Joined 3 days ago</span>
+                            </div>
+                        </div>
+                        <button class="rounded text-sm text-white bg-[#27FF5E] px-2 py-1">Connet</button>
+                    </div>
                 </div>
 
-                <div class="w-2/4 h-auto min-h-[400px] rounded">
+                <div class="w-2/4 h-auto min-h-[400px] rounded flex flex-col space-y-4">
+                    <div class="rounded p-4 border border-gray-300 bg-white">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600 font-medium">Post Something</span>
+                            <button class="p-2 px-3 bg-white rounded-full border border-gray-300">
+                                <i class='bx bx-plus text-xl text-gray-600'></i>
+                            </button>
+                        </div>
+                    </div>
                     <div class="flex flex-col space-y-4">
                         <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
                             <div class="flex items-center space-x-2">
@@ -269,7 +308,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
 
