@@ -10,4 +10,11 @@ urlpatterns = [
     path('feed/', views.feed, name='feed'),
     path('profile/', views.profile, name='profile'),
 
+
+    #=========================================================
+    # Post
+    #=========================================================
+    path('post/new/', views.createPost, name='create_post'),
+    # path('post/<int:pk>/', views.postDetail, name='post_detail'),
+
 ]
