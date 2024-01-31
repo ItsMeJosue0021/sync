@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block content %}
-<section class="max-w-[1300px] h-auto min-h-[650px] mx-auto px-4 ">
-    <form action="{% url 'create_post' %}" method="post" enctype="multipart/form-data">
+<section>
+    <form action="{% url 'edit_post' post.id %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="flex flex-col space-y-4">            
-            <textarea name="content" id="id_content">{{ post_form.content.value }}</textarea>
+            <textarea name="content" id="id_content">{{ post.content }}</textarea>
             
             <div class="flex items-center justify-center w-full">
                 <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -23,6 +23,14 @@
             
             <button type="submit">Save</button>
         </div>
+
+        {% if post.images.all %}
+            <div class="flex items-start space-x-2">
+                {% for image in post.images.all %}
+                    <img src="{{ image.file.url }}" alt="Image" class="w-32 h-28 rounded">
+                {% endfor %}
+            </div>
+        {% endif %}
     </form>
 </section>
 
