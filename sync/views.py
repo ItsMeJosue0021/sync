@@ -35,7 +35,7 @@ def register(request):
 #=========================================================
 
 def feed(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-created_at')
     return render(request, 'pages/feed.html', {'posts': posts})
     # return render(request, 'pages/feed.html')
 
@@ -58,7 +58,7 @@ def createPost(request):
         if form.is_valid():
             post = form.save()    
             handle_image_uploads(request, post)
-            return redirect('create_post')
+            return redirect('feed')
     else:
         form = PostForm()
 
@@ -98,3 +98,13 @@ def deletePost(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
     return redirect('feed')
+
+#=========================================================
+# Delet Post Image
+#=========================================================
+
+def deletePostImage(request, post_id, image_id):
+    post = get_object_or_404(Post, pk=post_id)
+    image = get_object_or_404(PostImage, pk=image_id)
+    image.delete()
+    return redirect('edit_post', post_id=post.id)

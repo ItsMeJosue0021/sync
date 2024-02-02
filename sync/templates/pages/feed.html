@@ -6,7 +6,7 @@
         <div class="flex flex-col md:flex-row items-start justify-between w-full max-w-[1300px] h-auto min-h-[650px] mx-auto px-4 space-y-6 md:space-y-0">
            <div class="w-full flex items-start md:space-x-4 ">
                 <div class="hidden md:block w-1/4 h-60 rounded sticky top-20 flex flex-col space-y-2">
-                    <div class="flex items-center justify-between border border-gray-300 rounded p-2">
+                    <div class="flex items-center justify-between border border-gray-200 rounded p-2">
                         <div class="flex items-center space-x-2">
                             <img src="{% static 'images/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
                             <div class="flex flex-col justify-start">
@@ -17,7 +17,7 @@
                         <button class="rounded text-sm text-white bg-[#27FF5E] px-2 py-1">Connect</button>
                     </div>
 
-                    <div class="flex items-center justify-between border border-gray-300 rounded p-2">
+                    <div class="flex items-center justify-between border border-gray-200 rounded p-2">
                         <div class="flex items-center space-x-2">
                             <img src="{% static 'images/rad.jpg' %}" alt="" class="w-12 h-12 rounded-full">
                             <div class="flex flex-col justify-start">
@@ -28,7 +28,7 @@
                         <button class="rounded text-sm text-white bg-[#27FF5E] px-2 py-1">Connect</button>
                     </div>
 
-                    <div class="flex items-center justify-between border border-gray-300 rounded p-2">
+                    <div class="flex items-center justify-between border border-gray-200 rounded p-2">
                         <div class="flex items-center space-x-2">
                             <img src="{% static 'images/wes.jpg' %}" alt="" class="w-12 h-12 rounded-full">
                             <div class="flex flex-col justify-start">
@@ -44,28 +44,32 @@
                     <div class="rounded p-4 border border-gray-300 bg-white">
                         <div class="flex items-center justify-between">
                             <span class="text-gray-600 font-medium">Post Something</span>
-                            <a href="{% url 'create_post' %}" class="p-2 px-3 bg-white rounded-full border border-gray-300">
-                                <i class='bx bx-plus text-xl text-gray-600'></i>
+                            <a href="{% url 'create_post' %}" class="p-2 px-3 bg-white rounded-full border border-gray-300 group hover:bg-[#27FF5E] hover:border-[#27FF5E]">
+                                <i class='bx bx-plus text-xl text-gray-600 group-hover:text-white'></i>
                             </a>
                         </div>
                     </div>
 
                     {% for post in posts %}
                         <div class="flex flex-col space-y-4">
-                            <div class="w-full h-fit flex flex-col space-y-2 border border-gray-300 rounded p-2 px-3">
+                            <div class="w-full h-fit flex flex-col space-y-2 border border-gray-200 rounded p-2 px-3">
                                 <div class="flex w-fill items-start justify-between">
                                     <div class="flex items-center space-x-2">
                                         <img src="{% static 'images/josh.jpg' %}" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex flex-col justify-start">
                                             <a class="text-gray-700 font-semibold">Joshua Salceda</a>
-                                            <span class="text-xs font-light">8m</span>
+                                            <span class="text-xs font-light">{{ post.created_at }}</span>
                                         </div>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <a href="{% url 'edit_post' post.id %}">Edit</a>
+                                        <a href="{% url 'edit_post' post.id %}">
+                                            <i class='bx bx-edit text-blue-500'></i>
+                                        </a>
                                         <form method="post" action="{% url 'delete_post' post.id %}">
                                             {% csrf_token %}
-                                            <button type="submit">Delete</button>
+                                            <button type="submit">
+                                                <i class='bx bx-trash text-red-500'></i>
+                                            </button>
                                         </form>
                                     </div>
                                 </div>
@@ -75,9 +79,9 @@
                                         <p class="text-gray-600 text-justify">{{ post.content }}</p>
                                     </div>
                                     {% if post.images.all %}
-                                        <div class="flex items-start space-x-2 overflow-x-hidden">
+                                        <div class="flex items-start space-x-2 overflow-x-auto scroll-container">
                                             {% for image in post.images.all %}
-                                                <img src="{{ image.file.url }}" alt="Image" class="w-32 h-28 rounded">
+                                                <img src="{{ image.file.url }}" alt="Image" class="w-32 h-28 rounded zoomable-image cursor-pointer">
                                             {% endfor %}
                                         </div>
                                     {% endif %}
@@ -88,20 +92,20 @@
                                             <i class='bx bxs-heart text-[#27FF5E] text-xl' ></i>
                                             <span class="text-sm font-light">12</span>
                                         </div>
-                                        <span class="text-sm font-light">100 comments</span>
+                                        <span class="text-sm font-light text-gray-600">100 comments</span>
                                     </div>
                                     <div class="flex items-center justify-between pt-1">
                                         <div class="flex space-x-1 items-center">
-                                            <i class='bx bxs-heart text-gray-500 text-2xl' ></i>
-                                            <span class="text-sm">Like</span>
+                                            <i class='bx bxs-heart text-gray-400 text-2xl' ></i>
+                                            <span class="text-sm text-gray-600">Like</span>
                                         </div>
                                         <div class="flex space-x-1 items-center">
-                                            <i class='bx bxs-message-square-dots text-gray-500 text-2xl'></i>
-                                            <span class="text-sm">Commet</span>
+                                            <i class='bx bxs-message-square-dots text-gray-400 text-2xl'></i>
+                                            <span class="text-sm text-gray-600">Commet</span>
                                         </div>
                                         <div class="flex space-x-1 items-center">
-                                            <i class='bx bxs-bookmark text-gray-500 text-2xl'></i>
-                                            <span class="text-sm">Save</span>
+                                            <i class='bx bxs-bookmark text-gray-400 text-2xl'></i>
+                                            <span class="text-sm text-gray-600">Save</span>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +114,7 @@
                     {% endfor %}
                 </div>
 
-                <div class="hidden md:block w-1/4 h-80 rounded border border-gray-300 sticky top-20 p-2">
+                <div class="hidden md:block w-1/4 h-80 rounded border border-gray-200 sticky top-20 p-2">
                     <div class="relative w-full h-28 bg-gray-300 rounded">
                         <img src="{% static 'images/josh.jpg' %}" alt="" class="absolute left-5 top-14 w-28 h-28 rounded-full">
                         <div  class="absolute -bottom-14 right-5 leading-none">
@@ -136,6 +140,59 @@
                 </div>
            </div>
         </div>
+        <!-- Modal -->
+        <div id="imageModal" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 ">
+            <div class="w-full h-full flex items-center justify-center">
+                <div id="modalContent" class="max-w-2xl mx-auto">
+                    <img id="modalImage" src="" alt="Modal Image" class="w-full h-full rounded">
+                    <button id="closeModal" class="absolute top-2 right-2 text-white cursor-pointer">
+                        <i class="bx bx-x text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
+    <style>
+        .scroll-container {
+            -ms-overflow-style: none;  
+            scrollbar-width: none;  
+        }
+    
+        .scroll-container::-webkit-scrollbar {
+            display: none;  
+        }
+    </style>
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+        }
+    
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; 
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            var images = document.querySelectorAll('.zoomable-image');
+    
+            images.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    openModal(image.src);
+                });
+            });
+    
+
+            document.getElementById('imageModal').addEventListener('click', function (event) {
+                if (event.target.id === 'imageModal') {
+                    closeModal();
+                }
+            });
+    
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+        });
+    </script>
+    
 {% endblock %}
 
